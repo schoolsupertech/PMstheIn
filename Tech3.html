@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tech3</title>
+        <link href="css/Bootstrap-4.0.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container-groups">
+            <nav id="wrapper">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li>
+                        <a href="#" title="Nhóm">Bài viết</a>
+                        <ul>
+                            <li>
+                                <a href="Tech_Groups.html" title="Công nghệ">Công nghệ</a>
+                            </li>
+                            <li>
+                                <a href="Stories_Groups.html">Câu chuyện</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.fb.com/Together-We-Will-Pass-105641721712764" target="_blank">Kỷ niệm</a></li>
+                    <li><a href="Evaluate.html">Đánh giá</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <h1>Tech - IT - Easy!</h1>
+            <hr>
+            <br>
+        </div>
+        <div class="container-s1">
+            <h2>SQL Server</h2>
+            <h3 class="custom-h3-2">Chắc sẽ có nhiều người thắc mắc tại sao Front end (nơi giao diện người dùng) nhận được một hoặc nhiều yêu cầu từ user thì những dòng code đó được xử lí như thế nào để có được dữ liệu từ Back end?  Thì mình xin trả lời luôn là nhờ SQL. Và SQL là gì? Có ý nghĩ to lớn như thế nào thì bạn hãy dành một chút xíu xiu thời gian rảnh của mình để đọc bài viết này nhé.</h3>
+            <div class="pos-image">
+                <img width="750" height="511" title="SQL server" src="images/SQL-1.jpg" alt loading="lazy" sizes="(max-width: 750px) 100vw, 750px">
+                <span class="pos-image">SQL Server là gì?</span>
+            </div>
+            <h3 class="custom-h3-3">1. SQL là gì?</h3>
+            <i>a. Khái niệm</i>
+	        <p class="custom-p-1">
+                - SQL Server chính là một hệ quản trị dữ liệu quan hệ sử dụng câu lệnh SQL để trao đổi dữ liệu giữa máy cài SQL Server và máy Client. Một Relational Database Management System – RDBMS gồm có: databases, datase engine và các chương trình ứng dụng dùng để quản lý các bộ phận trong RDBMS và những dữ liệu khác.
+            </p>
+            <p>
+                -Nói cho đơn giản thì SQL được ghi tắt bởi Structured Query Language (Ngôn ngữ truy vấn dữ liệu). Và dữ liệu được truy vấn ở đây đó là ở cơ sở dữ liệu (DataBase).
+            </p>
+            <p>
+                => Nói đến Data Base thì nó là một cơ sở dữ liệu rất là rộng lớn có thể bao gồm tất cả dữ liệu của mọi thứ trên thế giới này. Vì vậy để làm việc với nó không phải là chuyện đơn giản và nó có rất nhiều rủi ro (vd như leak thông tin mật của tổ chức hoặc công ty lớn, sai 1 dữ liệu nhỏ trong 1 chuỗi kế hoạch lớn,..) những điều đó có thể sẽ khiến bạn đi tù rất nhiều năm!! Vậy nên hãy cẩn thận khi làm việc với DataBase.
+            </p>
+            <i>b. Lịch sử ra đời và các ấn bản của SQL server</i>
+            <p>+ Lịch sử ra đời SQL server</p>
+            <p>
+                Năm 1989, phiên bản đầu tiên của SQL Server 1.0 ra đời được dùng cho các hệ điều hành 16 bit và được phát triển cho tới ngày nay.
+            </p>
+            <p>
+                Cho tới khi SQL Server ra phiên bản 6.5 thì được thị trường chấp nhận rộng rãi. Một đột phá cải tiến cho SQL Server 7.0 khi được Microsoft viết lại một engine hoàn toàn mới. Đến khi SQL Server từ phiên bản 7.0 cải tiến lên 8.0 chủ yếu phát triển về tính năng <a href="https://monamedia.co/dich-vu/thiet-ke-website/" target="_blank">thiết kế website</a>.
+            </p>
+            <p>
+                Cho đến ngày nay thì phiên bản mới nhất đó là SQL Server 2016 hỗ trợ bộ vi xử lý 64 bit ra đời vào ngày 1 tháng 6 năm 2016.
+            </p>
+            <p>+ Một vài ấn bản SQL Server</p>
+            <p>
+                Enterprise: là một ấn bản chứa tất cả các đặc điểm nổ bật của SQL Server như: các công cụ cho tạo và quản lý phân cụm SQL Server, nhân bộ máy cơ sở dữ liệu và một số dịch vụ đi kèm. Nó có thể đánh địa chỉ 12 terabytes và quản lý cơ sở dữ liệu lên tới 524 petabytes.
+            </p>
+	        <p>
+                Standard: Ấn bản này có thể chạy tốt trên hệ thống lên tới 4 CPU và 2 GB RAM rất thích hợp cho các dịch vụ thiết kế web vừa và nhỏ.
+            </p>
+	        <p>
+                Developer: Ấn bản này giới hạn số lượng người kết nối với server nhưng có đầy đủ các tính năng của Enterprise Edition. Đây là phiên bản được sử dụng cho kiểm tra và phát triển ứng dụng phù hợp cho các cá nhân trong lĩnh vực web như: freelancer Việt Nam, website spa,…
+            </p>
+	        <p>
+                Workgroup: ấn bản SQL Server này có các chức năng lõi cơ sở dữ liệu nhưng không đi kèm các dịch vụ. Ở phiên bản 2012 không có ấn bản này.
+            </p>
+	        <p>
+                Express: Ấn bản này dễ dàng sử dụng và quản trị cơ sở dữ liệu đơn giản.
+            </p>
+            <i>c. Các thành phần cơ bản trong SQL Server</i>
+            <p>
+                Các thành cơ bản trong SQL Server gồm có: Reporting Services, Database Engine, Integration Services, Notification Services, Full Text Search Service,… Tất cả kết hợp với nhau tạo thành một giải pháp hoàn chỉnh giúp cho việc phân tích và lưu trữ dữ liệu trở nên dễ dàng hơn.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Database Engine:</strong> Đây là một engine có khả năng chứa dữ liệu ở các quy mô dưới dạng support và table. Ngoài ra, nó còn có khả năng tự điều chỉnh ví dụ: trả lại tài nguyên cho ệ điều hành khi một user log off và sử dụng thêm các tài nguyên của máy khi cần.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Integration Services:</strong> là tập hợp các đối tượng lập trình và các công cụ đồ họa cho việc sao chép, di chuyển và chuyển đổi dữ liệu.  Khi bạn làm việc trong một công ty lớn thì dữ liệu được lưu trữ ở nhiều nơi khác nhau như được chứa trong: Oracle, SQL Server, DB2, Microsoft Access,… và bạn chắc chắn sẽ có nhu cầu di chuyển dữ liệu giữa các server này. Ngoài ra, bạn còn muốn định dạng dữ liệu trước khi lưu vào database. Chắc chắn Integration Services sẽ giúp bạn giải quyết được công việc này dễ dàng.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Analysis Services:</strong> Đây là một dịch vụ phân tích dữ liệu rất hay của Microsoft. Dữ liệu khi được lưu trữ vào trong database mà bạn không thể lấy được những thông tin bổ ích thì coi như không có ý nghĩa gì. Chính vì thế, công cụ này ra đời giúp bạn trong việc phân tích dữ liệu một cách hiệu quả và dễ dàng bằng cách dùng kỹ thuật khai thác dữ liệu – datamining và khái niệm hình khối nhiều chiều – multi dimendion cubes.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Notification Services:</strong> Dịch vụ thông báo này là nền tảng cho sự phát triển và triển khai các ứng dụng soạn và gửi thông báo. Ngoài ra, dịch vụ này còn có chức năng gửi thông báo theo dịch thời đến hàng ngàn người dăng ký sử dụng trên nhiều loại thiết bị khác nhau.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Reporting  Services:</strong>: là một công cụ tạo, quản lý và triển khai báo cáo bao gồm: server và client. Ngoài ra, nó còn là nền tảng cho việc phát triển và xây dựng các ứng dụng báo cáo.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Full Text Search Service:</strong> là một thành phần đặc biệt trong việc truy vấn và đánh chỉ mục dữ liệu văn bản không cấu trúc được lưu trữ trong các cơ sở dữ liệu SQL Server.
+            </p>
+            <p class="custom-p-2">
+                <strong>+ Service Broker:</strong> là một môi trường lập trình cho việc tạo ra các ứng dụng trong việc nhảy qua các Instance.
+            </p>
+            <h3 class="custom-h3-3">2. Tại sao lại sử dụng SQL trong thiết kế web?</h3>
+            <p class="custom-p-1">
+                SQL Server không phải là một hệ quản trị cơ sở dữ liệu độc lập mà nó chỉ là một thành phần với vai trò ngôn ngữ là công cụ giao tiếp giữa hệ cơ sở dữ liệu và người dùng. Chính vì thế nó được sử dụng trong các dịch vụ thiết kế web đẹp với chức năng giao tiếp với người dùng với các vai trò sau:
+            </p>
+            <p>
+                SQL là một ngôn ngữ đòi hỏi có tính tương tác cao: Người dùng có thể dễ dàng trao đổi với các tiện ích thông qua các câu lệnh của SQL đến cơ sở dữ liệu và nhận kết quả từ cơ sở dữ liệu.
+            </p>
+            <p>
+                SQL là một ngôn ngữ lập trình cơ sở dữ liệu: Các lập trình viên có thể xây dựng các chương trình ứng dụng giao tiếp với cơ sở dữ liệu bằng cách nhúng các câu lệnh SQL vào trong ngôn ngữ lập trình.
+            </p>
+            <p>
+                SQL là một ngôn ngữ lập trình quản trị cơ sở dữ liệu: Người quản trị cơ sở dữ liệu có thề quản lý, định nghĩa và điều khiển truy cập cơ sở dữ liệu thông qua SQL.
+            </p>
+            <p>
+                SQL là một ngôn ngữ lập trình cho các hệ thống chủ khách: SQL được sử dụng như là một công cụ giao tiếp với các trình ứng dụng trong hệ thống cơ sở dữ liệu khách chủ.
+            </p>
+            <p>
+                SQL là ngôn ngữ truy cập dữ liệu trên Internet: SQL được sử dụng với vai trò tương tác với dữ liệu trong hầu hết các máy chủ web và máy chủ Internet.
+            </p>
+            <p>
+                SQL là ngôn ngữ cơ sở dữ liệu phân tán: Với vai trò giao tiếp với các hệ thống trên mạng, gửi và nhận các yêu cầu truy xuất dữ liệu với nhau.
+            </p>
+            <p>
+                ->>Nhìn chung SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ được sử dụng trong các chức năng tương tác giữa người dùng và dữ liệu. Chính vì thế, nó được sử dụng trong các dịch vụ thiết kế web rẻ và chuyên nghiệp. 
+            </p>
+            <h3 class="custom-h3-3">3.Tổng kết:</h3>
+            <p>
+                Nói tóm lại SQL là ngôn ngữ rất nhiều chức năng đa dạng sẽ khiến các bạn thấy thích thú và tìm tòi, tìm hiểu về nó nhiều hơn. Tuy SQL không phải đơn giản để học được nhưng chỉ cần cố gắng và dành nhiều thời gian mỗi ngày một chút thì không có việc gì là không thể. Và một khi đã thành thạo SQL rồi thì bạn cũng có cơ hội việc làm ở các công ty lớn rất cao.
+            </p>
+        </div>
+        <footer class="final">
+            <div class="container-s1">
+                <hr>
+                <p>Copyright © PMstheIn. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

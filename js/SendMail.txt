@@ -1,0 +1,46 @@
+// Lấy giá trị từ html
+function setUpForSendEmail() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  sendEmail(name, email, message);
+}
+
+// Gán giá trị từ html vào function
+function sendEmail(name, email, message) {
+  var emailContent =
+    "Tên: " +name +
+    "<br>" +
+    "Email: " +email +
+    "<br>" +
+    "Evaluate: " +message;
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "testSender@gmail.com", //email để gửi đi
+    Password: "abcd", //mật khẩu để gửi đi 
+    To: "testReceiver@gmail.com", //email nhận
+    From: "testSender@gmail.com", //email gửi
+    Subject: "ANNOUNCEMENT", //subject mail
+    Body: emailContent, //body mail
+  }).then((message) => checkSuccess(message));
+}
+
+// Check xem gửi mail đã thành công hay chưa
+function checkSuccess(message) {
+  if (message == "OK") {
+    Swal.fire({
+        imageUrl: 'images/blablabla.png',
+        imageHeight: 500,
+        padding: '3em',
+        icon: 'success',
+        title: 'Thành công',
+        text: 'Gửi được rồi nha!',
+        confirmButtonColor: '#d75b99',
+        confirmButtonText: 'Cảm ơn nhiều nhé',
+        backdrop: 'url("images/817.gif")',
+    });
+  } else {
+    Swal.fire("Oops!", "Có lỗi rồi, vui lòng thử lại nhé.", "error");
+  }
+}
